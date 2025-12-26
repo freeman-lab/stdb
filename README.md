@@ -4,13 +4,13 @@
 
 # about
 
-This repo contains a CLI tool built in Python for interfacing with Solidarity Tech. It's a work in progress and is mainly designed to pull together various access patterns that show up consistently in a campaign.
+This repo contains a CLI tool built in Python for interfacing with Solidarity Tech. It's mainly designed to pull together various access patterns that show up consistently in a campaign, and will be expanded over time.
 
 *Work in progress*
 
 # installation
 
-Packaging is handled by poetry. To instal, just use
+Packaging is handled by poetry. To install, just use
 
 ```
 poetry install
