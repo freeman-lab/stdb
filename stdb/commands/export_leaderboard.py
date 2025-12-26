@@ -9,8 +9,9 @@ from sqlalchemy import text, inspect
 
 
 @click.command(name='leaderboard')
+@click.option('--output', '-o')
 @click.option('--name')
-def export_leaderboard(name=None):
+def export_leaderboard(output=None, name=None):
     """Export user actions for an action page organized as a leaderboard."""
     engine = create_engine()
 
@@ -57,6 +58,7 @@ def export_leaderboard(name=None):
 
     records = df_counts.to_dict()
 
-    s = json.dumps(records, ensure_ascii=False)
+    output = 'output.json' if output is None else output
 
-    print(s)
+    with open(output, 'w') as f:
+        json.dump(records, f, ensure_ascii=False, indent=4)

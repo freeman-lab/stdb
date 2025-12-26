@@ -9,8 +9,9 @@ from sqlalchemy import text, inspect
 
 
 @click.command(name='events')
+@click.option('--output', '-o')
 @click.option('--name')
-def export_events(name=None):
+def export_events(output=None, name=None):
     """Export data about current events."""
     engine = create_engine()
 
@@ -100,5 +101,8 @@ def export_events(name=None):
     df['borough'] = out['name'].values
 
     records = df.to_dict(orient='records')
-    s = json.dumps(records, ensure_ascii=False)
-    print(s)
+
+    output = 'output.json' if output is None else output
+
+    with open(output, 'w') as f:
+        json.dump(records, f, ensure_ascii=False, indent=4)
