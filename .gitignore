@@ -1,0 +1,11 @@
+.ruff_cache
+turfdb.egg-info
+.DS_Store
+**/__pycache__/
+.env
+.env.prod
+.env.local
+venv/
+staging/
+backup/
+credentials.json

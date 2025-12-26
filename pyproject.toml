@@ -1,0 +1,35 @@
+[tool.poetry]                           # Poetry configuration + metadata.
+name = "stdb"
+version = "0.1.0"
+description = "This repo contains a command line tool (CLI) for interfacing with Solidarity Tech."
+authors = [
+    "Jeremy Freeman <jeremy.freeman@mac.com>",
+]
+readme = "README.md"
+repository="https://github.com/freeman-lab/stdb"
+
+
+[tool.poetry.dependencies]              # Main dependencies for Poetry to install.
+python = "^3.13"
+click = "^8.0"
+python-dotenv = "^1.0.1"
+pandas = "^2.2.3"
+yachalk = "^0.1.7"
+tqdm = "^4.67.1"
+sqlalchemy = "^2.0.45"
+psycopg = {extras = ["binary"], version = "^3.3.2"}
+shapely = "^2.1.2"
+geopandas = "^1.1.2"
+
+
+[tool.poetry.group.dev.dependencies]    # Dev dependencies for Poetry to install.
+ipython = "^9.4.0"
+
+
+[build-system]                          # Backend build system configuration for Poetry.
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+stdb = "stdb.cli:cli"
