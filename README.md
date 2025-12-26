@@ -24,11 +24,11 @@ poetry run stdb <command> <args>
 
 You need to have an `.env` file that specifies several environmental variables:
 
-`ST_HOST` host name for the read-only db mirror
-`ST_USER` user name for the read-only db mirror
-`ST_PASSWORD` password for the read-only db mirror
-`ST_DB` db name for the read-only db mirror
-`ST_CA` certificate authorty for the read-only db mirror
+- `ST_HOST` host name for the read-only db mirror
+- `ST_USER` user name for the read-only db mirror
+- `ST_PASSWORD` password for the read-only db mirror
+- `ST_DB` db name for the read-only db mirror
+- `ST_CA` certificate authorty for the read-only db mirror
 
 # commands
 
