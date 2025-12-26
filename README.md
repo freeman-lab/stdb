@@ -10,7 +10,7 @@ This repo contains a CLI tool built in Python for interfacing with Solidarity Te
 
 # installation
 
-Packaging is handled by poetry. To install, just use
+Packaging is handled by Poetry. To install, just use
 
 ```
 poetry install
